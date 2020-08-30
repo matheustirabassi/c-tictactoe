@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1598820737 source:c:\temp\ws-codeblocks\tictactoe\main.cpp
+	<iostream>
+	<locale.h>
+	<cstdlib>
+	<ctime>
+	<windows.h>
+
