@@ -6,3 +6,20 @@
 	<ctime>
 	<windows.h>
 
+1598826109 source:c:\temp\ws-codeblocks\tictactoe\application\main.cpp
+	<iostream>
+	<locale.h>
+	<cstdlib>
+	<ctime>
+	<windows.h>
+	"../boardGame/board.h"
+
+1598825891 c:\temp\ws-codeblocks\tictactoe\boardgame\board.h
+
+1598825964 source:c:\temp\ws-codeblocks\tictactoe\boardgame\board.cpp
+	<iostream>
+	<locale.h>
+	<cstdlib>
+	<ctime>
+	<windows.h>
+

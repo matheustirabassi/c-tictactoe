@@ -32,7 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="application/main.cpp" />
+		<Unit filename="boardGame/board.cpp" />
+		<Unit filename="boardGame/board.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
