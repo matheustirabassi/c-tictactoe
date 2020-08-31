@@ -5,31 +5,53 @@
 #include <windows.h>
 #include "../boardGame/board.h"
 using namespace std;
-
+struct Players {
+    string name;
+    int points;
+};
 
 int main() {
     setlocale(LC_ALL,"");
-    int **board = alocateBoard();
-    printCorrectBoard(board);
-    int player = firstTurn(board);
-    scanBoard(board, player);
-
-    while (checkWin(board) == 0 || checkWin(board) == -1) {
-            system("cls");
-            printCorrectBoard(board);
-            player = nextPlayer(player);
-            if(checkWin(board) == -1){
-                 cout << "O jogo deu velha! "<< endl;
-                 return 0;
+    int rodadas = 0;
+    int winner = 0;
+    cout << "Qual é o seu nome player 1?" << endl;
+    Players player1;
+    cin >> player1.name;
+    cout << "Qual é o seu nome player 2?" << endl;
+    Players player2;
+    cin >> player2.name;
+    cout << "Melhor de quanto?" << endl;
+    cin >> rodadas;
+    player1.points = 0;
+    player2.points = 0;
+    cout << "Serão " << rodadas << " rodadas" << endl;
+    system("pause");
+    while(rodadas > player1.points  && rodadas > player2.points ) {
+        winner = createGame();
+        if(winner == 1) {
+            player1.points++;
+            cout << player1.name << " com " << player1.points;
+            if(player1.points == 1) {
+                cout <<" ponto!";
+            } else {
+                cout <<" pontos!";
             }
-            scanBoard(board,player);
-
+        }
+        if(winner == 2) {
+            player2.points++;
+            cout << player2.name << " com " << player2.points;
+            if(player2.points == 1) {
+                cout <<" ponto!";
+            } else {
+                cout << " pontos!";
+            }
+        }
+        cout << endl;
+        system("pause");
     }
-    printCorrectBoard(board);
-    if(checkWin(board) == 1)
-        cout << "O jogador ganhador é o bolinha! "<< endl;
-    if(checkWin(board) == 2)
-        cout << "O jogador ganhador é o xizinho! "<< endl;
-
+    if(winner == 1)
+        cout << "O ganhador é : " <<  player1.name;
+    else
+        cout << "O ganhador é : " <<  player2.name;
     return 0;
 }

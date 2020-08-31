@@ -10,5 +10,5 @@ void scanBoard(int **A, int player);
 void printCorrectBoard(int **A);
 int nextPlayer(int player);
 int randomNumber();
-
+int createGame();
 #endif // BOARD_H_INCLUDED
